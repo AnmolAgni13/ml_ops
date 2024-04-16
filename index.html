@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRIS DATASET FEATURES</title>
+</head>
+<body>
+    <h1>APP FOR IRIS DATASET By Anmol Agnihotri</h1>
+    <form action="/predict" method="post">
+        <label for="feature1">Sepal length:</label><br>
+        <input type="text" id="feature1" name="feature1"><br>
+
+        <label for="feature2">Sepal width:</label><br>
+        <input type="text" id="feature2" name="feature2"><br>
+
+        <label for="feature3">Petal length:</label><br>
+        <input type="text" id="feature3" name="feature3"><br>
+
+        <label for="feature4">Petal width:</label><br>
+        <input type="text" id="feature4" name="feature4"><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
